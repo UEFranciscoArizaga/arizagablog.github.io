@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eventos - Colegio Dr. Francisco Arizaga Luque</title>
     <meta name="description" content="Página oficial de eventos del Colegio Dr. Francisco Arizaga Luque. Mantente informado sobre todas las actividades académicas y culturales." />
+    <script type="text/javascript">
+      (function() {
+        if (window.location.search[1] === '?') {
+          var redirect = window.location.search.slice(1).split('&').map(s => s.replace(/~and~/g, '&')).join('?');
+          if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.pathname + '/' + redirect + window.location.hash);
+          } else {
+            window.location.href = window.location.pathname + '/' + redirect + window.location.hash;
+          }
+        }
+      }());
+    </script>
   </head>
   <body>
     <div id="root"></div>
