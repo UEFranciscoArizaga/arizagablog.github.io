@@ -31,6 +31,7 @@ jobs:
         env:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          GITHUB_PAGES_REPO: ${{ github.event.repository.name }}
 
       - name: Add .nojekyll file
         run: touch dist/.nojekyll
